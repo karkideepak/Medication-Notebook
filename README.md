@@ -39,8 +39,23 @@ Each medication row includes:
 - Status dropdown with:
   - Administered
   - On Hold
-  - Missed
 
-SAVE FUNCTION
-- User can save medication status updates
-- Records can be stored for daily tracking
+  
+----------------------------------------
+APP STRUCTURE
+----------------------------------------
+
+HOME SCREEN
+- Username field
+- Password field
+- Login button
+
+DASHBOARD SCREEN
+Header Section:
+- Customer Name
+- DOB
+- Today's Date
+
+Medication Table:
+- Column 1: Medication Name
+- Column 2: Status Dropdown
