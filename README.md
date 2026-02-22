@@ -13,3 +13,34 @@ After logging in, the user can:
 - See scheduled medications
 - Record medication status
 - Save daily medication updates
+
+
+----------------------------------------
+FEATURES
+----------------------------------------
+
+SECURE LOGIN
+- Username and password authentication
+- Protects personal medication records
+
+DAILY DASHBOARD
+Displays:
+- Customer Name
+- Date of Birth (DOB)
+- Today's Date (auto-generated)
+
+MEDICATION SCHEDULE
+Medications are categorized into:
+- AM
+- PM
+
+Each medication row includes:
+- Medication Name
+- Status dropdown with:
+  - Administered
+  - On Hold
+  - Missed
+
+SAVE FUNCTION
+- User can save medication status updates
+- Records can be stored for daily tracking
