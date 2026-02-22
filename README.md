@@ -56,6 +56,49 @@ Header Section:
 - DOB
 - Today's Date
 
+
+----------------------------------------
+TECH STACK
+----------------------------------------
+
+Language:
+- Swift
+
+Framework:
+- SwiftUI
+
+Platform:
+- iOS
+
+Optional future backend:
+- Core Data (local storage)
+- CloudKit (cloud sync)
+- Firebase Authentication
+- Face ID / Touch ID support
+
+----------------------------------------
+FUTURE IMPROVEMENTS
+----------------------------------------
+
+- Push notifications for medication reminders
+- Medication history logs
+- Export daily logs as PDF
+- Multi-user support
+- Dark mode support
+
+----------------------------------------
+LICENSE
+----------------------------------------
+
+This project is intended for personal use.
+You may modify and distribute as needed.
+
+
+SAVE FUNCTION
+- User can save medication status updates
+- Records can be stored for daily tracking
+
+
 Medication Table:
 - Column 1: Medication Name
 - Column 2: Status Dropdown
