@@ -1,0 +1,7 @@
+Check Your Mac Type
+uname -m
+
+Download .NET 8 SDK
+Microsoft .NET > .NET 8 SDK (LTS)
+
+> dotnet --version
