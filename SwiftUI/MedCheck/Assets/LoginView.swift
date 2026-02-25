@@ -1,13 +1,5 @@
-import SwiftUI
-
-struct LoginView: View {
-    
-    @State private var email = ""
-    @State private var password = ""
-    @State private var errorMessage = ""
-    @State private var isLoggedIn = false
-    
-    var body: some View {
+var body: some View {
+    NavigationStack {
         VStack(spacing: 20) {
             
             Text("Sign In")
@@ -39,25 +31,10 @@ struct LoginView: View {
                     .cornerRadius(8)
             }
             
+            NavigationLink("", destination: DashboardView(), isActive: $isLoggedIn)
+                .hidden()
+            
         }
         .padding()
     }
-    
-    func login() {
-        if email.isEmpty || password.isEmpty {
-            errorMessage = "Please enter both email and password."
-            return
-        }
-        
-        if email == "test@example.com" && password == "123456" {
-            errorMessage = ""
-            print("Login successful")
-        } else {
-            errorMessage = "Invalid credentials."
-        }
-    }
-}
-
-#Preview {
-    LoginView()
 }
