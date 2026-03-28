@@ -1,0 +1,12 @@
+{
+  "drug_id": "DB01400",
+  "name": "Aspirin",
+  "brand_names": ["Bayer", "Bufferin"],
+  "dosage_forms": ["Tablet", "Capsule"],
+  "ingredients": ["Aspirin"],
+  "route": "Oral",
+  "strength": "325 mg",
+  "description": "Aspirin is used to treat pain, fever, or inflammation.",
+  "side_effects": ["Nausea", "Stomach pain"],
+  "interaction_risk": "High"
+}
