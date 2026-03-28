@@ -1,0 +1,28 @@
+Core API Structure (REST)
+Base URL: https://api.example.com/v1/ 
+1. Medication Search/Lookup
+Find drug products by name, strength, or type. 
+Endpoint: /medication/search
+Method: GET
+Query Parameters:
+q (string): Search query (e.g., "aspirin", "tylenol").
+limit (int): Number of results.
+form (string): Tablet, capsule, liquid.
+Example Call: GET /v1/medication/search?q=aspirin&limit=5 
+DrugBank
+DrugBank
+ +2
+2. Medication Details/Detail
+Retrieve comprehensive information about a specific drug. 
+Endpoint: /medication/{id}
+Method: GET
+Example Call: GET /v1/medication/12345 
+3. Drug Interaction Check
+Check for interactions between two or more medications. 
+DrugBank
+DrugBank
+Endpoint: /interaction/check
+Method: POST
+Body Parameters:
+meds (array): List of drug IDs or names.
+Example Call: POST /v1/interaction/check 
