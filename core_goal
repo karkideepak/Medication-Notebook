@@ -1,0 +1,332 @@
+Here is a polished final draft in plain-text specification format that you can save as `requirements.txt` or `project-spec.txt`.
+
+# Medication Administration Dashboard - Project Requirements
+
+## Project Overview
+
+The Medication Administration Dashboard is a web-based patient medication tracking system designed for nurses and healthcare staff. The dashboard will allow users to monitor scheduled medications, record medication administration, and review medication history for a patient during a selected time period.
+
+The system should provide a simple, responsive, and secure interface for managing medication schedules and administration records.
+
+## Primary Goals
+
+1. Display patient medication schedules by time window.
+2. Allow nurses to record medication administration using initials.
+3. Provide monthly medication tracking visibility.
+4. Protect sensitive patient information.
+5. Maintain a clean and easy-to-use dashboard interface.
+
+## System Type
+
+* Web-based application
+* Responsive design for desktop and tablet use
+* Single patient dashboard initially
+* Expandable for multiple patients in future versions
+
+## Patient Header Section
+
+The top section of the dashboard will display patient information.
+
+Visible Information:
+
+* Patient Name
+* Patient ID
+* Room Number
+* Medication Alerts
+* Allergies
+
+Sensitive Information:
+
+* Date of Birth (DOB)
+* Medical Record Number (MRN)
+* Diagnosis
+* Emergency Contact Information
+
+Sensitive fields should remain hidden by default and only reveal when:
+
+* User hovers over the field
+  OR
+* User clicks a "Reveal Information" button
+
+Security Note:
+Hover-only interactions should have mobile/tablet alternatives.
+
+## Time Filter Options
+
+The top header must include time-based filtering options.
+
+Required Filters:
+
+1. AM
+2. PM
+3. Custom Time Range
+
+AM Filter:
+
+* Displays all medications scheduled during morning hours.
+
+PM Filter:
+
+* Displays all medications scheduled during evening/night hours.
+
+Custom Time Range:
+
+* Allows users to select:
+
+  * Start Time
+  * End Time
+* Dashboard updates dynamically to show medications scheduled within the selected period.
+
+## Medication Schedule Display
+
+The dashboard should display medications in a monthly schedule format.
+
+Layout Requirements:
+
+* Current month displayed by default
+* Dates displayed as rows
+* Medications displayed as columns
+* Each medication/date intersection contains an empty clickable box
+
+Example Layout:
+
+| Date | Aspirin | Insulin | Metformin |
+| ---- | ------- | ------- | --------- |
+| 1    | [ ]     | [ ]     | [ ]       |
+| 2    | [ ]     | [ ]     | [ ]       |
+
+Medication Information:
+Each medication should include:
+
+* Medication Name
+* Dosage
+* Administration Route
+* Scheduled Time
+* Frequency
+* Start Date
+* End Date
+* Special Instructions
+
+## Medication Administration Entry
+
+Nurses should be able to click an empty medication box to record administration.
+
+When clicked:
+
+* User may:
+
+  * Enter initials
+  * Select status
+  * Add optional notes
+
+Medication Status Options:
+
+* Administered
+* Missed
+* Refused
+* Held
+* Late
+
+System should automatically record:
+
+* Timestamp
+* User/Nurse ID
+* Date of action
+
+## Color Coding
+
+Recommended status colors:
+
+* Green = Administered
+* Yellow = Pending
+* Red = Missed
+* Gray = Held
+
+Color coding should improve quick visual recognition.
+
+## Update / Save Functionality
+
+A persistent "Update" or "Save Changes" button should appear at the bottom of the dashboard.
+
+Requirements:
+
+* Save all modifications
+* Confirm successful update
+* Prevent accidental data loss
+* Optional auto-save functionality
+
+Optional Features:
+
+* Undo changes
+* Save draft
+* Change history tracking
+
+## Authentication & User Roles
+
+The system should support secure user authentication.
+
+User Types:
+
+* Nurse
+* Administrator
+* Doctor
+
+Requirements:
+
+* Username/password login
+* Session management
+* Role-based permissions
+
+Examples:
+
+* Nurses can update medication records
+* Administrators can edit schedules
+* Doctors can review records
+
+## Audit Trail
+
+The system should maintain an audit log for all actions.
+
+Audit Information:
+
+* User name
+* Action performed
+* Timestamp
+* Previous value
+* Updated value
+
+Example:
+"Nurse AB marked Aspirin as administered at 8:02 AM."
+
+## Database & Data Storage
+
+The system must support persistent storage.
+
+Recommended Storage:
+
+* SQLite (prototype)
+  OR
+* PostgreSQL/MySQL (production)
+
+Stored Data:
+
+* Patient information
+* Medication schedules
+* Medication administration records
+* User accounts
+* Audit logs
+
+## Technical Requirements
+
+Frontend:
+
+* HTML5
+* CSS3
+* JavaScript
+
+Recommended Frameworks:
+
+* Tailwind CSS
+* Bootstrap
+  OR
+* React (optional future enhancement)
+
+Backend (Optional Future Phase):
+
+* Node.js + Express
+  OR
+* Python Flask/Django
+
+Database:
+
+* SQLite for development
+* PostgreSQL for production
+
+## Responsive Design
+
+The dashboard should function on:
+
+* Desktop computers
+* Tablets
+* Mobile devices
+
+Requirements:
+
+* Touch-friendly controls
+* Readable font sizes
+* Responsive table layouts
+
+## Accessibility Requirements
+
+The system should support accessibility standards.
+
+Requirements:
+
+* Keyboard navigation
+* High contrast support
+* Screen reader compatibility
+* Large clickable elements
+
+## Future Enhancements
+
+Possible future features include:
+
+* Multiple patient support
+* Medication reminders
+* Email/SMS alerts
+* PDF export
+* Printable medication sheets
+* Search and filtering
+* Dark mode
+* Analytics dashboard
+* Barcode medication scanning
+
+## Security Requirements
+
+Because patient information is sensitive, the system should include:
+
+* Encrypted connections (HTTPS)
+* Secure authentication
+* Protected patient information
+* Audit logging
+* Role-based access control
+
+Compliance considerations:
+
+* HIPAA compliance (United States)
+
+## Recommended Development Phases
+
+Phase 1:
+
+* Static HTML dashboard
+* Medication schedule display
+* Basic interaction
+
+Phase 2:
+
+* Save/update functionality
+* Local database integration
+
+Phase 3:
+
+* Authentication system
+* Audit logging
+* Role permissions
+
+Phase 4:
+
+* Responsive/mobile optimization
+* Advanced reporting
+* Production deployment
+
+## Final Deliverable
+
+The completed system should provide:
+
+* A clean medication tracking dashboard
+* Secure patient information handling
+* Medication administration recording
+* Time-based medication filtering
+* Monthly schedule visualization
+* Reliable data storage and updates
