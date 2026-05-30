@@ -1,0 +1,6 @@
+CREATE TABLE patients (
+    patient_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    date_of_birth DATE
+);
