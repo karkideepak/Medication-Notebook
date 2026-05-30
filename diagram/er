@@ -1,0 +1,61 @@
+PATIENT
+-------
+patient_id (PK)
+first_name
+last_name
+date_of_birth
+
+      1
+      |
+      |
+      N
+
+MEDICATION_ORDER
+----------------
+order_id (PK)
+patient_id (FK)
+medication_id (FK)
+prescribed_dose
+route
+frequency
+start_date
+end_date
+
+      N
+      |
+      |
+      1
+
+MEDICATION
+----------
+medication_id (PK)
+name
+strength
+manufacturer
+
+MEDICATION_ORDER
+       1
+       |
+       |
+       N
+
+ADMINISTRATION_LOG
+------------------
+admin_id (PK)
+order_id (FK)
+caregiver_id (FK)
+scheduled_time
+administered_time
+dose_given
+notes
+
+       N
+       |
+       |
+       1
+
+CAREGIVER
+---------
+caregiver_id (PK)
+name
+email
