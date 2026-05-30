@@ -1,0 +1,6 @@
+CREATE TABLE medications (
+    medication_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    strength VARCHAR(50),
+    manufacturer VARCHAR(100)
+);
