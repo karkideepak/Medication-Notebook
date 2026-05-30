@@ -1,0 +1,16 @@
+CREATE TABLE medication_orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    patient_id INT NOT NULL,
+    medication_id INT NOT NULL,
+    prescribed_dose VARCHAR(50),
+    route VARCHAR(50),
+    frequency VARCHAR(50),
+    start_date DATE,
+    end_date DATE,
+
+    FOREIGN KEY (patient_id)
+        REFERENCES patients(patient_id),
+
+    FOREIGN KEY (medication_id)
+        REFERENCES medications(medication_id)
+);
